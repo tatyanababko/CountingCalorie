@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        {% block css %}
+        {% endblock css%}
+        <title>Главная</title>
+  <body>
+    <div class="container">
+        <header id="headr">
+          <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                      <h2><img src="{% static 'pictures/diet.png'%}">Подсчет калорий и снижение веса</h2>
+                    </div>
+                    <div>
+                        <a class="btn btn-secondary" href="#">Выйти</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {% block js %}
+    {% endblock js %}
+  </body>
+</html>
