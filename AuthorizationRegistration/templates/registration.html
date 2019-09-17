@@ -1,24 +1,27 @@
-{% extends 'start_auth_registr.html' %}
+{% extends 'start_page.html' %}
 {% load crispy_forms_tags %}
 {% load static %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
+    <link rel="stylesheet" href="{% static 'css/autorization_registration.css' %}">
 {% endblock css%}
 
 {% block js %}
-    <script src="{% static 'js/registration.js' %}"></script>
 {% endblock js %}
 
 {% block content %}
-    <form action="" method="post">{% csrf_token %}
+    <hr class="hr-xs">
+
+    <form class="login-block" action="" method="post">{% csrf_token %}
         {{ form|crispy }}
-        <input type="submit" value="Регистрация">
-        <button class="btn mb-2">
-            <a href="{% url 'social:begin' 'facebook' %}">Регистрация with Facebook</a>
-        </button>
-        <button class="btn mb-2">
-            <a href="{% url 'social:begin' 'google-oauth2' %}">Регистрация with Google</a>
-        </button>
+        <div>
+
+            <input class="btn btn-secondary" type="submit" value="Регистрация">
+            <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'pictures/facebook.png'%}"></a>
+            <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'pictures/google1.png'%}"></a>
+
+            <hr class="hr-xs">
+
+        </div>
     </form>
 {% endblock %}

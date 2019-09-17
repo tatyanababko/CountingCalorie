@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['mysite.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +39,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'AuthorizationRegistration.apps.AuthorizationregistrationConfig',
     'social_django',
+    'Profile.apps.ProfileuserConfig',
 ]
 
 MIDDLEWARE = [
@@ -74,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'CountingCalorie.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
@@ -84,7 +83,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -109,19 +107,19 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOpenId',
     'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
-  )
+)
 
 SOCIAL_AUTH_FACEBOOK_KEY = '693590801104267'
 SOCIAL_AUTH_FACEBOOK_SECRET = '1e6387480fc373dcfaa7223eec44617f'
 
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-      'fields': 'id, name, email'
-    }
+    'fields': 'id, name, email'
+}
 SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
-        ('name', 'name'),
-        ('email', 'email'),
-    ]
+    ('name', 'name'),
+    ('email', 'email'),
+]
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '432974994036-h68ulcj6iadae3vdb0k73g7tqf68buck.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '5QiN_VqESd9NC9XXviukNtNO'
@@ -144,7 +142,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

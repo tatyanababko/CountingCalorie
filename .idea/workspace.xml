@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78a660da-1f28-4781-8ded-1a1b86adfc6d" name="Default Changelist" comment="" />
+    <list default="true" id="78a660da-1f28-4781-8ded-1a1b86adfc6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Profile/forms/add_profile_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profile/forms/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profile/migrations/0002_profileuser_dima.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profile/migrations/0003_remove_profileuser_dima.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profile/migrations/0004_auto_20190917_1903.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profile/migrations/0005_auto_20190917_1908.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photo/2cat_9sos5l8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photo/2cat_ODbn2ht.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photo/2cat_WNVDuH4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/photo/2cat_zjrwNMU.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationRegistration/forms/autorization.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationRegistration/forms/autorization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationRegistration/forms/registrationforms.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationRegistration/forms/registrationforms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationRegistration/templates/autorization.html" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationRegistration/templates/autorization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationRegistration/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationRegistration/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationRegistration/templates/start_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationRegistration/templates/start_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationRegistration/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationRegistration/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthorizationRegistration/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/AuthorizationRegistration/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CountingCalorie/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CountingCalorie/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CountingCalorie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CountingCalorie/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/migrations/0002_auto_20190912_0802.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/templates/page_add_food.html" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/templates/bootstrap_datetimepicker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/templates/profile_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/templates/profile_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/templates/start_page_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/templates/start_page_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/autorization_registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/autorization_registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/photo/cat.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pictures/Google-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pictures/diet.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/pictures/diet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pictures/google.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/pictures/google.png" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,13 +51,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1QMUEYuwpRyX5rCTrwu6sZ1r4qP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -32,6 +79,34 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="CountingCalorie" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AuthorizationRegistration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AuthorizationRegistration/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -49,5 +124,21 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

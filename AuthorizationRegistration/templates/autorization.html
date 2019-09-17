@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'start_page.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
 
-</body>
-</html>
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/autorization_registration.css' %}">
+{% endblock css%}
+
+{% block js %}
+{% endblock js %}
+
+{% block content %}
+    <hr class="hr-xs">
+
+    <form class="login-block" action="" method="post">{% csrf_token %}
+        {{ form|crispy }}
+        <div>
+            <input class="btn btn-secondary" type="submit" value="Авторизация">
+            <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'pictures/facebook.png'%}"></a>
+            <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'pictures/google1.png'%}"></a>
+
+            <hr class="hr-xs">
+
+            <div class="login-links">
+                <a href="{% url 'registration' %}">Регистрация нового пользователя</a>
+            </div>
+            <div class="login-links">
+                <a href="#">Восстановить пароль?</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

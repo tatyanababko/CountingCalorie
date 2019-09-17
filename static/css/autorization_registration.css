@@ -1,5 +1,28 @@
-h3{
+h2{
     font-style: italic;
     font-weight: bold;
-    color: #708090;
+    color: #191970;
+}
+
+#headr{
+    background-color:#fff;
+    padding: 0 0 0px;
+    position: block;
+    z-index: 100;
+}
+
+.login-block
+{
+    background-color:#fff;
+    padding:60px;
+    -webkit-box-shadow:0 3px 50px 0 rgba(0,0,0,.1);
+    box-shadow:0 3px 50px 0 rgba(0,0,0,.1);
+    text-align:left;
+    border-radius:10px
+}
+
+.login-block .hr-xs
+{
+    margin-top:5px;
+    margin-bottom:5px
 }

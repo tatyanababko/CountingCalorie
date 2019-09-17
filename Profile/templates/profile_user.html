@@ -7,12 +7,84 @@
 {% endblock css%}
 
 {% block js %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'js/profile.js'%}"></script>
 {% endblock js %}
 
 {% block content %}
     <hr class="hr-xs">
 
-    <form action="" method="post">{% csrf_token %}
-        {{ form|crispy }}
-    </form>
+    <div class="row">
+        {% if profile_current_user.count > 0 %}
+            {% for pole in profile_current_user %}
+                <div class="col-md-offset-2 col-md-6 col-lg-offset-3 col-lg-4">
+                    <div class="profile">
+                        <div class="col-sm-12 profile">
+                                <figure>
+                                    <p><img src="/{{ pole.photo.url }}"></p>
+                                </figure>
+                                <h2 class='title_h4'>{{ pole.username }}</h2>
+                                <p><strong>Обо мне: </strong></p>
+                                <p><strong>Дата рождения: </strong> {{ pole.date_born }} </p>
+                                <p><strong>Вес: </strong> {{ pole.weight }} </p>
+                                <p><strong>Рост: </strong> {{ pole.height }} </p>
+                        </div>
+                        <button id ="add_profile" class = "btn btn-secondary">Изменить данные профиля</button>
+                    </div>
+                </div>
+                <div class="col border-left">
+                    <div class="row">
+                        <div class="col-5"><h2 class='title_h4'>Мои продукты:</h2></div>
+                        <div class="col-3"><button id ="chose_new_product" class = "btn btn-secondary">Добавить продукт</button></div>
+                        <div class="col-4"><button id="add_new_product" class="btn btn-secondary">Предложить продукт</button></div>
+                    </div>
+                    <table class="table table-hover table-bordered">
+                      <thead>
+                        <tr>
+                            <th scope="col">Продукт</th>
+                            <th scope="col">Количество</th>
+                            <th scope="col">К-во КилоКалорий</th>
+                            <th scope="col">Дата</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for product in profile_product_user %}
+                        <tr>
+                            <td>{{ product.name_product }}</td>
+                            <td>{{ product.amount_food }}</td>
+                            <td>{{ product.count_calories }}</td>
+                            <td>{{ product.data_time_add_product }}</td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="row">
+            <div class="col">
+                <div class="col-sm-12 profile">
+                    <h2 class='title_h4'>Дополнить данные профиля "{{ user.username }}"</h2>
+
+                    <hr class="hr-xs">
+
+                    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                        {{ form|crispy }}
+                        <table>
+                        {% for field in person_form %}
+                            <tr>
+                                <td><em>{{field.label_tag}}</em></td>
+                                <td class="border-left">{{ field }}</td>
+                            </tr>
+                        {% endfor %}
+                        </table>
+                        <input type="submit" value="Сохранить">
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+<hr class="hr-xs">
 {% endblock %}
