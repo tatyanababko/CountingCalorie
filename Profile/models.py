@@ -15,7 +15,7 @@ class ProfileUser(models.Model):
     date_born = models.DateField(verbose_name="Дата рождения", default=timezone.now)
     weight = models.FloatField(verbose_name="Вес")
     height = models.FloatField(verbose_name="Рост")
-    photo = models.FileField(upload_to='static/photo', default='DEFAULT VALUE')
+    photo = models.FileField(upload_to='static/photo', default='static/photo/Dogg.jpeg')
 
     def __str__(self):
         return f"{self.username} ({self.date_born})"
@@ -38,7 +38,7 @@ class Food(models.Model):
 class UserFood(models.Model):
     objects = None
     username = models.ForeignKey(User, verbose_name='Пользователь', db_index=True, on_delete=models.CASCADE)
-    name_product = models.ForeignKey(Food, db_index=True, on_delete=models.CASCADE)
+    name_product = models.ForeignKey(Food, db_index=True, on_delete=models.CASCADE, verbose_name='Название продукта')
     amount_food = models.FloatField(verbose_name="К-во продукта", default="100")
     data_time_add_product = models.DateTimeField(default=timezone.now)
 

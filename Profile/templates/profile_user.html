@@ -2,19 +2,43 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
-{% block css %}
-    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
-{% endblock css%}
-
-{% block js %}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="{% static 'js/profile.js'%}"></script>
-{% endblock js %}
-
 {% block content %}
     <hr class="hr-xs">
 
-    <div class="row">
+    <!-- Окно добавления продукта для пользователя с расчетом калорий -->
+
+    <div id="chose" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title title_h4">Расчет КилоКалорий</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>
+                <form id = "formchose" action="" method="post">{% csrf_token %}
+                    {{ form|crispy }}
+                    <table>
+                    {% for product in user_chose_product %}
+                        <tr>
+                            <td><em>{{product.label_tag}}</em></td>
+                            <td class="border-left">{{ product }}</td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </form>
+            </p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              <input type="submit" class="btn btn-secondary" data-dismiss="modal" name = "chose"
+                     value="Сохранить" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="on_page">
         {% if profile_current_user.count > 0 %}
             {% for pole in profile_current_user %}
                 <div class="col-md-offset-2 col-md-6 col-lg-offset-3 col-lg-4">
@@ -35,7 +59,9 @@
                 <div class="col border-left">
                     <div class="row">
                         <div class="col-5"><h2 class='title_h4'>Мои продукты:</h2></div>
-                        <div class="col-3"><button id ="chose_new_product" class = "btn btn-secondary">Добавить продукт</button></div>
+                        <div class="col-3">
+                            <button id ="chose_new_product" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Добавить продукт</button>
+                        </div>
                         <div class="col-4"><button id="add_new_product" class="btn btn-secondary">Предложить продукт</button></div>
                     </div>
                     <table class="table table-hover table-bordered">
@@ -65,11 +91,11 @@
         <div class="row">
             <div class="col">
                 <div class="col-sm-12 profile">
-                    <h2 class='title_h4'>Дополнить данные профиля "{{ user.username }}"</h2>
+                    <h2 class='title_h4'>Дополнить данные профиля {{ user.username }}</h2>
 
                     <hr class="hr-xs">
 
-                    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                    <form id = "formadd" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
                         {{ form|crispy }}
                         <table>
                         {% for field in person_form %}
