@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78a660da-1f28-4781-8ded-1a1b86adfc6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Profile/migrations/0006_auto_20190918_1630.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profile/migrations/0007_auto_20190918_1654.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profile/migrations/0008_auto_20190918_1719.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Profile/migrations/0009_auto_20190918_1732.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photo/2cat_0HqNWxG.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photo/2cat_LKCryPp.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photo/2cat_VyY4JOQ.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/photo/Dogg.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile/forms/add_profile_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/forms/add_profile_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile/templates/profile_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/templates/profile_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profile/templates/start_page_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/templates/start_page_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Profile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Profile/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/profile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

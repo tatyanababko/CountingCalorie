@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic.edit import CreateView
 from .forms.add_profile_user import AddProfileUser, ChoseProductUser
 from .models import ProfileUser, UserFood
+from django.http import JsonResponse
 
 
 class ProfileFormView(CreateView):
@@ -22,15 +23,23 @@ class ProfileFormView(CreateView):
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwargs):
-        user_form = AddProfileUser(request.POST, request.FILES)
-        if user_form.is_valid():
-            profile = ProfileUser()
-            profile.username_id = request.user.id
-            profile.height = user_form.cleaned_data['height']
-            profile.weight = user_form.cleaned_data['weight']
-            profile.date_born = user_form.cleaned_data['date_born']
-            profile.photo = user_form.cleaned_data['photo']
-            profile.save()
-            return HttpResponseRedirect('/profile/')
-        else:
-            return HttpResponseRedirect('/')
+        if 'add_profile' in request.POST:
+            user_form = AddProfileUser(request.POST, request.FILES)
+            if user_form.is_valid():
+                profile = ProfileUser()
+                profile.username_id = request.user.id
+                profile.height = user_form.cleaned_data['height']
+                profile.weight = user_form.cleaned_data['weight']
+                profile.date_born = user_form.cleaned_data['date_born']
+                profile.photo = user_form.cleaned_data['photo']
+                profile.save()
+            else:
+                return HttpResponseRedirect('/')
+        if 'chose' in request.method == "POST" and 'chose' in request.is_ajax():
+            form_modal = UserFood(request.POST)
+            form_modal.save()
+            return JsonResponse({"success": True}, status=200)
+        return HttpResponseRedirect('/profile/')
+
+
+

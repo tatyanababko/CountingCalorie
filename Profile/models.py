@@ -40,17 +40,17 @@ class UserFood(models.Model):
     username = models.ForeignKey(User, verbose_name='Пользователь', db_index=True, on_delete=models.CASCADE)
     name_product = models.ForeignKey(Food, db_index=True, on_delete=models.CASCADE, verbose_name='Название продукта')
     amount_food = models.FloatField(verbose_name="К-во продукта", default="100")
-    data_time_add_product = models.DateTimeField(default=timezone.now)
+    data_time_add_product = models.DateField(verbose_name="Дата продукта", default=timezone.now)
+    count_calories = models.FloatField(verbose_name="Ккал расчет")
 
     @property
     def food_calories(self):
         result = Food.objects.filter(name_product__name_product=self.name_product).calories
         return result
 
-    @property
-    def count_calories(self):
-        result = (self.amount_food * self.food_calories) / 100
-        return result
+    def save(self, *args, **kwargs):
+        self.count_calories = (self.amount_food * self.food_calories) / 100
+        super(UserFood, self).save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.username}: {self.name_product} = {self.amount_food}гр. " \
